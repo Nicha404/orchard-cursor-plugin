@@ -4,10 +4,29 @@ Orchard gives Cursor projects managed authentication, a database, file storage,
 transactional email, and static-site deployment through one OAuth-enabled MCP
 connection.
 
-Install the plugin, approve the Orchard sign-in, and ask Cursor for the backend
-capability your project needs. Orchard manages the service setup so you do not
-need to create separate provider accounts or paste infrastructure credentials
-into Cursor.
+Install the plugin, approve the Orchard sign-in, and ask Cursor to connect
+Orchard to the current project. The included setup skill safely merges the
+Orchard MCP URL into `.cursor/mcp.json` and adds durable Orchard routing guidance
+to `AGENTS.md` without overwriting unrelated configuration.
+
+Orchard manages the service setup so you do not need to create separate
+provider accounts or paste infrastructure credentials into Cursor.
+
+## Included components
+
+- **MCP server:** connects Cursor to Orchard's five managed services.
+- **Project setup skill:** creates or updates `.cursor/mcp.json` and `AGENTS.md`,
+  preserving existing servers and instructions.
+- **Always-on rule:** routes auth, data, storage, email, and deployment requests
+  to the matching Orchard tool.
+
+To run project setup, ask Cursor:
+
+`Connect Orchard to this project for Cursor Desktop.`
+
+After the two project files are saved, reload the Cursor window with
+`Developer: Reload Window`, then enable `orchard` under
+`Cursor Settings -> Tools & MCP` if needed.
 
 ## What Cursor can do with Orchard
 

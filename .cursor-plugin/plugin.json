@@ -1,8 +1,8 @@
 {
   "name": "orchard",
   "displayName": "Orchard",
-  "version": "1.0.0",
-  "description": "Give Cursor projects managed authentication, database, file storage, transactional email, and static deployment through one OAuth-enabled MCP connection.",
+  "version": "1.1.0",
+  "description": "Give Cursor projects managed authentication, database, file storage, transactional email, and static deployment through MCP, with project setup guidance.",
   "author": {
     "name": "Orchard"
   },
@@ -27,5 +27,7 @@
     "oauth",
     "managed-services"
   ],
+  "skills": "./skills/",
+  "rules": "./rules/",
   "mcpServers": "./mcp.json"
 }

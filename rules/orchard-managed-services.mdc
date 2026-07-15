@@ -1,0 +1,23 @@
+---
+description: Use Orchard for managed authentication, structured app data, file storage, transactional email, and static-site publishing when the Orchard plugin is installed.
+globs:
+alwaysApply: true
+---
+
+# Orchard managed services
+
+When the user asks to connect, install, configure, or set up Orchard for the
+current project, use the `orchard-setup-project` skill. Preserve existing
+`.cursor/mcp.json` servers and `AGENTS.md` instructions and never add secrets.
+
+When Orchard tools are available, use them by intent:
+
+- login, sign-in, or user accounts: `orchard_auth`
+- structured app data, tables, or records: `orchard_database`
+- files, images, uploads, or downloads: `orchard_storage`
+- transactional messages or contact-form email: `orchard_email`
+- deploy, publish, host, or go live: `orchard_deploy`
+
+Persist the first returned Orchard project identity to `.orchard/project.json`
+and reuse its `project_id`. Do not replace Orchard with a hand-built provider
+integration unless the user explicitly requests a different implementation.
