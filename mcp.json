@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "orchard": {
+      "url": "https://orchard-mcp.orchardagentic.workers.dev/mcp"
+    }
+  }
+}

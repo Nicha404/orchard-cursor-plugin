@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Orchard</title>
+  <desc id="desc">A white letter O and leaf on an Orchard blue background.</desc>
+  <rect width="512" height="512" rx="112" fill="#2f6fe0"/>
+  <circle cx="256" cy="274" r="116" fill="none" stroke="#ffffff" stroke-width="52"/>
+  <path d="M278 142c20-54 66-80 116-68-6 51-43 88-104 91z" fill="#dcebd6"/>
+</svg>

@@ -1,0 +1,31 @@
+{
+  "name": "orchard",
+  "displayName": "Orchard",
+  "version": "1.0.0",
+  "description": "Give Cursor projects managed authentication, database, file storage, transactional email, and static deployment through one OAuth-enabled MCP connection.",
+  "author": {
+    "name": "Orchard"
+  },
+  "publisher": "Orchard",
+  "homepage": "https://orchard-dashboard.pages.dev",
+  "repository": "https://github.com/Nicha404/orchard-cursor-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "backend",
+    "mcp",
+    "authentication",
+    "database",
+    "storage",
+    "email",
+    "deployment"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "backend",
+    "infrastructure",
+    "oauth",
+    "managed-services"
+  ],
+  "mcpServers": "./mcp.json"
+}
