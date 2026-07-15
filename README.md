@@ -15,10 +15,9 @@ provider accounts or paste infrastructure credentials into Cursor.
 ## Included components
 
 - **MCP server:** connects Cursor to Orchard's five managed services.
-- **Connection skill:** verifies the installed connection, initializes project
-  identity on first use, and provides a safe manual fallback when needed.
 - **Always-on rule:** routes auth, data, storage, email, and deployment requests
-  to the matching Orchard tool.
+  to the matching Orchard tool and provides the persistent guidance that would
+  otherwise require project-level instructions.
 
 ## Install
 
@@ -35,9 +34,9 @@ To verify the connection, ask Cursor:
 
 `Check whether Orchard is connected to this project.`
 
-The included skill can merge a manual `.cursor/mcp.json` or add durable
-`AGENTS.md` instructions when explicitly requested, but neither file is required
-for a normal Marketplace installation.
+Neither `.cursor/mcp.json` nor `AGENTS.md` is required for a normal Marketplace
+installation. The plugin-supplied rule provides the Orchard routing instructions
+without modifying the user's project files.
 
 ## What Cursor can do with Orchard
 

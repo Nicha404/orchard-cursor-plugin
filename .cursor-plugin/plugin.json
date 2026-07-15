@@ -1,7 +1,7 @@
 {
   "name": "orchard",
   "displayName": "Orchard",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Install managed authentication, database, file storage, transactional email, and static deployment in Cursor through one OAuth-enabled MCP plugin.",
   "author": {
     "name": "Orchard",
@@ -28,7 +28,6 @@
     "oauth",
     "managed-services"
   ],
-  "skills": "./skills/",
   "rules": "./rules/",
   "mcpServers": "./mcp.json"
 }

@@ -8,8 +8,9 @@ alwaysApply: true
 
 The installed plugin already supplies the Orchard MCP connection and these
 routing instructions. Do not create `.cursor/mcp.json` or `AGENTS.md` merely to
-finish a Marketplace installation. When the user asks to verify, repair, or
-manually configure the connection, use the `orchard-setup-project` skill.
+finish a Marketplace installation. To verify the connection, call
+`orchard_storage` with `action: status`. If authentication is required, direct
+the user to `Cursor Settings -> Tools & MCP -> orchard -> Authenticate`.
 
 When Orchard tools are available, use them by intent:
 
@@ -19,8 +20,7 @@ When Orchard tools are available, use them by intent:
 - transactional messages or contact-form email: `orchard_email`
 - deploy, publish, host, or go live: `orchard_deploy`
 
-On the first project-scoped Orchard request, call `orchard_storage` with
-`action: register_project` and the current folder name when no
-`.orchard/project.json` exists. Persist the returned `persist` block exactly and
-reuse its `project_id`. Do not replace Orchard with a hand-built provider
-integration unless the user explicitly requests a different implementation.
+Follow the Orchard MCP server instructions for project registration and runtime
+integration. Reuse the `project_id` saved in `.orchard/project.json`. Do not
+replace Orchard with a hand-built provider integration unless the user
+explicitly requests a different implementation.
