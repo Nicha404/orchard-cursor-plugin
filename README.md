@@ -4,10 +4,10 @@ Orchard gives Cursor projects managed authentication, a database, file storage,
 transactional email, and static-site deployment through one OAuth-enabled MCP
 connection.
 
-Install the plugin, approve the Orchard sign-in, and ask Cursor to connect
-Orchard to the current project. The included setup skill safely merges the
-Orchard MCP URL into `.cursor/mcp.json` and adds durable Orchard routing guidance
-to `AGENTS.md` without overwriting unrelated configuration.
+Install the plugin, approve the Orchard sign-in, and start asking Cursor for the
+managed service you need. The plugin supplies the MCP connection and routing
+instructions in one installation; no project-level MCP file or API key is
+required.
 
 Orchard manages the service setup so you do not need to create separate
 provider accounts or paste infrastructure credentials into Cursor.
@@ -15,18 +15,29 @@ provider accounts or paste infrastructure credentials into Cursor.
 ## Included components
 
 - **MCP server:** connects Cursor to Orchard's five managed services.
-- **Project setup skill:** creates or updates `.cursor/mcp.json` and `AGENTS.md`,
-  preserving existing servers and instructions.
+- **Connection skill:** verifies the installed connection, initializes project
+  identity on first use, and provides a safe manual fallback when needed.
 - **Always-on rule:** routes auth, data, storage, email, and deployment requests
   to the matching Orchard tool.
 
-To run project setup, ask Cursor:
+## Install
 
-`Connect Orchard to this project for Cursor Desktop.`
+1. Install Orchard from the Cursor Marketplace.
+2. Open `Cursor Settings -> Tools & MCP`, select `orchard`, and approve the
+   Google sign-in when prompted.
+3. Ask Cursor for authentication, data, storage, email, or deployment.
 
-After the two project files are saved, reload the Cursor window with
-`Developer: Reload Window`, then enable `orchard` under
-`Cursor Settings -> Tools & MCP` if needed.
+On the first project-scoped request, Cursor registers the current folder and
+saves the returned non-secret project identity in `.orchard/project.json`.
+Every later request reuses that `project_id`.
+
+To verify the connection, ask Cursor:
+
+`Check whether Orchard is connected to this project.`
+
+The included skill can merge a manual `.cursor/mcp.json` or add durable
+`AGENTS.md` instructions when explicitly requested, but neither file is required
+for a normal Marketplace installation.
 
 ## What Cursor can do with Orchard
 
@@ -72,7 +83,7 @@ for current details.
 
 - [Privacy Policy](https://orchard-dashboard.pages.dev/privacy.html)
 - [Terms of Service](https://orchard-dashboard.pages.dev/terms.html)
-- [Orchard dashboard](https://orchard-dashboard.pages.dev)
+- [Orchard dashboard](https://www.orchardagentic.cloud/)
 - [GitHub issues](https://github.com/Nicha404/orchard-cursor-plugin/issues)
 
 ## License

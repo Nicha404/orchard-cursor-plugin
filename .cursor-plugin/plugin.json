@@ -1,13 +1,14 @@
 {
   "name": "orchard",
   "displayName": "Orchard",
-  "version": "1.1.0",
-  "description": "Give Cursor projects managed authentication, database, file storage, transactional email, and static deployment through MCP, with project setup guidance.",
+  "version": "1.2.0",
+  "description": "Install managed authentication, database, file storage, transactional email, and static deployment in Cursor through one OAuth-enabled MCP plugin.",
   "author": {
-    "name": "Orchard"
+    "name": "Orchard",
+    "email": "orchardagentic@gmail.com"
   },
   "publisher": "Orchard",
-  "homepage": "https://orchard-dashboard.pages.dev",
+  "homepage": "https://www.orchardagentic.cloud/index.html#connect",
   "repository": "https://github.com/Nicha404/orchard-cursor-plugin",
   "license": "MIT",
   "logo": "assets/logo.svg",
