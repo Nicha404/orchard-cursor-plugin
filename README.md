@@ -5,19 +5,17 @@ transactional email, and static-site deployment through one OAuth-enabled MCP
 connection.
 
 Install the plugin, approve the Orchard sign-in, and start asking Cursor for the
-managed service you need. The plugin supplies the MCP connection and routing
-instructions in one installation; no project-level MCP file or API key is
-required.
+managed service you need. The MCP server supplies the connection, routing, and
+project identity guidance directly; no project-level MCP file, rule, or API key
+is required.
 
 Orchard manages the service setup so you do not need to create separate
 provider accounts or paste infrastructure credentials into Cursor.
 
-## Included components
+## Included component
 
-- **MCP server:** connects Cursor to Orchard's five managed services.
-- **Always-on rule:** routes auth, data, storage, email, and deployment requests
-  to the matching Orchard tool and provides the persistent guidance that would
-  otherwise require project-level instructions.
+- **MCP server:** connects Cursor to Orchard's managed authentication, database,
+  storage, email, deployment, analytics, and design tools.
 
 ## Install
 
@@ -35,8 +33,8 @@ To verify the connection, ask Cursor:
 `Check whether Orchard is connected to this project.`
 
 Neither `.cursor/mcp.json` nor `AGENTS.md` is required for a normal Marketplace
-installation. The plugin-supplied rule provides the Orchard routing instructions
-without modifying the user's project files.
+installation. Orchard's MCP descriptions provide the routing and project
+identity instructions without modifying the user's project files.
 
 ## What Cursor can do with Orchard
 
@@ -45,6 +43,8 @@ without modifying the user's project files.
 - Store and serve uploads, images, and documents
 - Send transactional email
 - Publish static frontends to a public URL
+- Measure visitors, events, funnels, and regional performance
+- Apply available Orchard interface designs
 
 ## MCP connection
 
